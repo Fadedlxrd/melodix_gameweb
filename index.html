@@ -4,19 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | TileGame</title>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script>
-  const tg = window.Telegram.WebApp;
-  tg.ready(); // Инициализация SDK
-
-  // Пример использования
-  tg.expand(); // Развернуть приложение на весь экран
-  console.log(tg.initDataUnsafe.user); // Данные пользователя
-</script>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/gameweb.loader.js"></script>
+    <script src="Build/Melodix1.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -35,9 +26,9 @@
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
         arguments: [],
-        dataUrl: "Build/gameweb.data",
-        frameworkUrl: "Build/gameweb.framework.js",
-        codeUrl: "Build/gameweb.wasm",
+        dataUrl: "Build/Melodix1.data.unityweb",
+        frameworkUrl: "Build/Melodix1.framework.js.unityweb",
+        codeUrl: "Build/Melodix1.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "TileGame",
